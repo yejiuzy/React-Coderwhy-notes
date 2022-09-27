@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 面向对象三大特性：封装、继承、多态
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        running() {
+          console.log("running");
+        }
+      }
+
+      // class Student {
+      //   constructor(name, age, sno) {
+      //     this.name = name;
+      //     this.age = age;
+      //     this.sno = sno;
+      //   }
+      // }
+
+      // class Teacher {
+      //   constructor(name, age, title) {
+      //     this.name = name;
+      //     this.age = age;
+      //     this.title = title;
+      //   }
+
+      //   running() {
+      //     console.log('running');
+      //   }
+      // }
+
+      class Student extends Person {
+        constructor(name, age, sno) {
+          super(name, age);
+          this.sno = sno;
+        }
+      }
+
+      const stu = new Student("zy", 18, 123);
+      console.log(stu.name, stu.age, stu.sno);
+    </script>
+  </body>
+</html>

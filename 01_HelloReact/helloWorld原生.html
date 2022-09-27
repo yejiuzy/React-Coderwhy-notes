@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title"></h1>
+    <button class="btn">改变文本</button>
+
+    <script>
+      let message = "hello world";
+      const titleEl = document.getElementsByClassName("title")[0];
+      titleEl.innerHTML = message;
+
+      const btnEl = document.getElementsByClassName("btn")[0];
+      btnEl.addEventListener("click", (e) => {
+        message = "hello react";
+        titleEl.innerHTML = message;
+      });
+    </script>
+  </body>
+</html>
